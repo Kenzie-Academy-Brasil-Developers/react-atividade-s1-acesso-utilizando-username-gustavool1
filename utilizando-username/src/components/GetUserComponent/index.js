@@ -3,9 +3,10 @@ import { useState } from "react/cjs/react.development"
 const GetUserComponent = ( { setUser, setIsLoggedIn } ) => {
    const [userInput, setUserInput] = useState('')
    const handleLogin = () => {
-       setUser(userInput)
-       setIsLoggedIn(true)
-       
+       if(userInput!== ''){
+           setUser(userInput)
+           setIsLoggedIn(true)
+       }
    }
    return(
        <form>
